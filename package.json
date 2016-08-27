@@ -1,7 +1,7 @@
 {
   "name": "format-duration",
   "description": "Convert a number in milliseconds to a standard duration string.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Nate Goldman <ungoldman@gmail.com>",
   "bugs": {
     "url": "https://github.com/ungoldman/format-duration/issues"
