@@ -1,0 +1,39 @@
+{
+  "name": "format-duration",
+  "description": "Convert a number in milliseconds to a standard duration string.",
+  "version": "0.0.0",
+  "author": "Nate Goldman <ungoldman@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/ungoldman/format-duration/issues"
+  },
+  "dependencies": {
+    "add-zero": "^1.0.0",
+    "parse-ms": "^1.0.1"
+  },
+  "devDependencies": {
+    "standard": "^8.0.0",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.0"
+  },
+  "homepage": "https://github.com/ungoldman/format-duration",
+  "keywords": [
+    "display",
+    "duration",
+    "format",
+    "hh:mm:ss",
+    "hours",
+    "milliseconds",
+    "mm:ss",
+    "seconds",
+    "time"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ungoldman/format-duration.git"
+  },
+  "scripts": {
+    "test": "standard && tape test/index.js | tap-spec"
+  }
+}

@@ -1,0 +1,15 @@
+var test = require('tape')
+var f = require('../')
+
+test('it works', function (t) {
+  t.equal(f(999), '0:00', 'anything under a second is 0:00')
+  t.equal(f(1999), '0:01', 'rounds 1999 down to 0:01')
+  t.equal(f(60000), '1:00', '60 seconds is a minute')
+  t.equal(f(60000 - 1), '0:59', '59 seconds looks ok')
+  t.equal(f(60000 * 60), '1:00:00', '60 minutes is an hour')
+  t.equal(f(60000 * 60 - 1), '59:59', '59 minutes looks ok')
+  t.equal(f(60000 * 60 * 24), '1:00:00:00', '24 hours is a day')
+  t.equal(f(60000 * 60 * 24 - 1), '23:59:59', '23 hours looks okay')
+  t.equal(f(60000 * 60 * 24 * 365), '365:00:00:00', '365 days is too long to care')
+  t.end()
+})
