@@ -34,7 +34,7 @@ format(1000) // '0:01'
 format(1000 * 2 - 1) // '0:01'
 
 // 60 seconds is a minute
-format(1000 * 60) // 1:00'
+format(1000 * 60) // '1:00'
 
 // 59 seconds looks like this
 format(1000 * 60 - 1) // '0:59'
