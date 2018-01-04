@@ -53,6 +53,15 @@ format(1000 * 60 * 60 * 24 - 1) // '23:59:59'
 
 // 365 days looks like this (not bothering with years)
 format(1000 * 60 * 60 * 24 * 365) // '365:00:00:00'
+
+// *NEW negative support* anything under a second is rounded down to zero
+format(-999) // '0:00'
+
+// 1000 milliseconds is a second
+format(-1000) // '-0:01'
+
+// 365 days looks like this (not bothering with years)
+format(-1000 * 60 * 60 * 24 * 365) // '-365:00:00:00'
 ```
 
 ## Contributing
