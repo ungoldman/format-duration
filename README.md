@@ -1,15 +1,17 @@
 # format-duration
 
-[![npm][npm-image]][npm-url]
-[![travis][travis-image]][travis-url]
-[![standard][standard-image]][standard-url]
+[![npm][1]][2]
+[![travis][3]][4]
+[![standard][5]][6]
+[![downloads][7]][2]
 
-[npm-image]: https://img.shields.io/npm/v/format-duration.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/format-duration
-[travis-image]: https://img.shields.io/travis/ungoldman/format-duration.svg?style=flat-square
-[travis-url]: https://travis-ci.org/ungoldman/format-duration
-[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
-[standard-url]: http://npm.im/standard
+[1]: https://img.shields.io/npm/v/format-duration.svg?style=flat-square
+[2]: https://www.npmjs.com/package/format-duration
+[3]: https://img.shields.io/travis/ungoldman/format-duration/master.svg?style=flat-square
+[4]: https://travis-ci.org/ungoldman/format-duration
+[5]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
+[6]: http://standardjs.com/
+[7]: https://img.shields.io/npm/dm/format-duration.svg?style=flat-square
 
 Convert a number in milliseconds to a standard duration string.
 
