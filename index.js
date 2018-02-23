@@ -2,9 +2,11 @@ const parseMs = require('parse-ms')
 const addZero = require('add-zero')
 
 module.exports = (ms) => {
-  let { days, hours, minutes, seconds } = parseMs(ms)
+  const unsignedMs = ms < 0 ? -ms : ms
+  const sign = ms <= -1000 ? '-' : ''
+  let { days, hours, minutes, seconds } = parseMs(unsignedMs)
   seconds = addZero(seconds)
-  if (days) return `${days}:${addZero(hours)}:${addZero(minutes)}:${seconds}`
-  if (hours) return `${hours}:${addZero(minutes)}:${seconds}`
-  return `${minutes}:${seconds}`
+  if (days) return `${sign}${days}:${addZero(hours)}:${addZero(minutes)}:${seconds}`
+  if (hours) return `${sign}${hours}:${addZero(minutes)}:${seconds}`
+  return `${sign}${minutes}:${seconds}`
 }
