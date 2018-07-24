@@ -1,5 +1,9 @@
 var test = require('tape')
+var fs = require('fs')
+var path = require('path')
+var isES5 = require('is-es5')
 var f = require('../')
+var src = fs.readFileSync(path.join(__dirname, '../index.js'), 'utf-8')
 
 test('it works', function (t) {
   t.equal(f(999), '0:00', 'anything under a second is 0:00')
@@ -26,5 +30,10 @@ test('it works with negative durations', function (t) {
   t.equal(f(-1000 * 60 * 60 * 24), '-1:00:00:00', 'check -24 hours is a day')
   t.equal(f(-1000 * 60 * 60 * 24 + 1), '-23:59:59', 'check -23 hours looks okay')
   t.equal(f(-1000 * 60 * 60 * 24 * 365), '-365:00:00:00', 'check -365 days is too long to care')
+  t.end()
+})
+
+test('is ES5', function (t) {
+  t.equal(isES5(src), true, 'is ES5')
   t.end()
 })

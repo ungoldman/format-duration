@@ -11,8 +11,9 @@
     "parse-ms": "^1.0.1"
   },
   "devDependencies": {
-    "standard": "^8.0.0",
-    "tap-spec": "^4.0.2",
+    "is-es5": "^1.0.0",
+    "standard": "^11.0.1",
+    "tap-spec": "^5.0.0",
     "tape": "^4.0.0"
   },
   "homepage": "https://github.com/ungoldman/format-duration",
