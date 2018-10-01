@@ -56,6 +56,11 @@ format(1000 * 60 * 60 * 24 - 1) // '23:59:59'
 // 365 days looks like this (not bothering with years)
 format(1000 * 60 * 60 * 24 * 365) // '365:00:00:00'
 
+// with leading zeros formatting looks like this
+format(1000 * 60, { leadingZeros: true }) // '01:00'
+format(1000 * 60 - 1, { leadingZeros: true }) // '00:59'
+format(1000 * 60 * 60, { leadingZeros: true }) // '01:00:00'
+
 // *NEW negative support* anything under a second is rounded down to zero
 format(-999) // '0:00'
 
