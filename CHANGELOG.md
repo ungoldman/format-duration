@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.3.0 - 2018-10-11
+
+### Features
+- add option for leading zeros (hours, minutes, seconds) (#3) - thanks @Deseteral
+
 ## 1.2.0 - 2018-07-24
 
 ### Features
