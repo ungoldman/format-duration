@@ -4,7 +4,7 @@
   "version": "1.3.0",
   "author": "Nate Goldman <ungoldman@gmail.com> (https://ungoldman.com/)",
   "bugs": {
-    "url": "https://github.com/ungoldman/format-duration/issues"
+    "url": "https://github.com/hypermodules/format-duration/issues"
   },
   "dependencies": {
     "add-zero": "^1.0.0",
@@ -16,7 +16,7 @@
     "tap-spec": "^5.0.0",
     "tape": "^4.0.0"
   },
-  "homepage": "https://github.com/ungoldman/format-duration",
+  "homepage": "https://github.com/hypermodules/format-duration",
   "keywords": [
     "display",
     "duration",
@@ -32,7 +32,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ungoldman/format-duration.git"
+    "url": "git+https://github.com/hypermodules/format-duration.git"
   },
   "scripts": {
     "test": "standard && tape test/index.js | tap-spec"
