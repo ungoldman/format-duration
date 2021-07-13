@@ -1,7 +1,14 @@
 var parseMs = require('parse-ms')
 var addZero = require('add-zero')
 
-module.exports = function (ms, options) {
+/**
+ * formatDuration converts a number in milliseconds to a standard duration string.
+ * @param  {number}  ms                       ms The number to format.
+ * @param  {object}  [options]                Formatting options
+ * @param  {boolean} [options.leading=false]  Adds leading zero to the formatted string.
+ * @return {string}                           The formatted duration string.
+ */
+function formatDuration (ms, options) {
   var leading = options && options.leading
   var unsignedMs = ms < 0 ? -ms : ms
   var sign = ms <= -1000 ? '-' : ''
@@ -11,3 +18,5 @@ module.exports = function (ms, options) {
   if (t.hours) return sign + (leading ? addZero(t.hours) : t.hours) + ':' + addZero(t.minutes) + ':' + seconds
   return sign + (leading ? addZero(t.minutes) : t.minutes) + ':' + seconds
 }
+
+module.exports = formatDuration
