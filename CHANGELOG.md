@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.4.0 - 2021-08-04
+
+### Features
+- add type definitions (#5) - thanks @guytepper
+
 ## 1.3.1 - 2018-10-11
 
 ### Fixes
