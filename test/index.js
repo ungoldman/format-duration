@@ -1,9 +1,9 @@
-var test = require('tape')
-var fs = require('fs')
-var path = require('path')
-var isES5 = require('is-es5')
-var f = require('../')
-var src = fs.readFileSync(path.join(__dirname, '../index.js'), 'utf-8')
+const test = require('tape')
+const fs = require('fs')
+const path = require('path')
+const isES5 = require('is-es5')
+const f = require('../')
+const src = fs.readFileSync(path.join(__dirname, '../index.js'), 'utf-8')
 
 test('it works', function (t) {
   t.equal(f(999), '0:00', 'anything under a second is 0:00')
