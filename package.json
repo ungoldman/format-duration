@@ -6,10 +6,6 @@
   "bugs": {
     "url": "https://github.com/ungoldman/format-duration/issues"
   },
-  "dependencies": {
-    "add-zero": "^1.0.0",
-    "parse-ms": "^1.0.1"
-  },
   "devDependencies": {
     "standard": "^16.0.4",
     "tape": "^5.5.2"
