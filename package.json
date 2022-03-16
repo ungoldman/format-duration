@@ -13,7 +13,7 @@
   "devDependencies": {
     "is-es5": "^1.0.0",
     "standard": "^16.0.4",
-    "tape": "^4.0.0"
+    "tape": "^5.5.2"
   },
   "homepage": "https://github.com/hypermodules/format-duration",
   "keywords": [
