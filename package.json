@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "add-zero": "^1.0.0",
-    "parse-ms": "^1.0.1"
+    "parse-ms": "^3.0.0"
   },
   "devDependencies": {
     "standard": "^16.0.4",
