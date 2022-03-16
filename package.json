@@ -4,7 +4,7 @@
   "version": "1.4.0",
   "author": "Nate Goldman <ungoldman@gmail.com> (https://ungoldman.com/)",
   "bugs": {
-    "url": "https://github.com/hypermodules/format-duration/issues"
+    "url": "https://github.com/ungoldman/format-duration/issues"
   },
   "dependencies": {
     "add-zero": "^1.0.0",
@@ -15,7 +15,7 @@
     "standard": "^16.0.4",
     "tape": "^5.5.2"
   },
-  "homepage": "https://github.com/hypermodules/format-duration",
+  "homepage": "https://github.com/ungoldman/format-duration",
   "keywords": [
     "display",
     "duration",
