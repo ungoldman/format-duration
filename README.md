@@ -1,19 +1,16 @@
 # format-duration
 
-[![npm][1]][2]
-[![travis][3]][4]
-[![standard][5]][6]
-[![downloads][7]][2]
-
-[1]: https://img.shields.io/npm/v/format-duration.svg?style=flat-square
-[2]: https://www.npmjs.com/package/format-duration
-[3]: https://img.shields.io/travis/hypermodules/format-duration/master.svg?style=flat-square
-[4]: https://travis-ci.org/hypermodules/format-duration
-[5]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
-[6]: http://standardjs.com/
-[7]: https://img.shields.io/npm/dm/format-duration.svg?style=flat-square
-
 Convert a number in milliseconds to a standard duration string.
+
+[![npm][npm-image]][npm-url]
+[![build][build-image]][build-url]
+[![downloads][downloads-image]][npm-url]
+
+[npm-image]: https://img.shields.io/npm/v/format-duration.svg
+[npm-url]: https://www.npmjs.com/package/format-duration
+[build-image]: https://github.com/ungoldman/format-duration/actions/workflows/tests.yml/badge.svg
+[build-url]: https://github.com/ungoldman/format-duration/actions/workflows/tests.yml
+[downloads-image]: https://img.shields.io/npm/dm/format-duration.svg
 
 ## Install
 
