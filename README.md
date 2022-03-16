@@ -21,7 +21,7 @@ npm install format-duration
 ## Usage
 
 ```js
-var format = require('format-duration')
+const format = require('format-duration')
 
 // anything under a second is rounded down to zero
 format(999) // '0:00'
