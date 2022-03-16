@@ -12,9 +12,8 @@
   },
   "devDependencies": {
     "is-es5": "^1.0.0",
-    "standard": "^11.0.1",
-    "tap-spec": "^5.0.0",
-    "tape": "^4.0.0"
+    "standard": "^16.0.4",
+    "tape": "^5.5.2"
   },
   "homepage": "https://github.com/hypermodules/format-duration",
   "keywords": [
@@ -36,6 +35,6 @@
     "url": "git+https://github.com/hypermodules/format-duration.git"
   },
   "scripts": {
-    "test": "standard && tape test/index.js | tap-spec"
+    "test": "standard && tape test/index.js"
   }
 }
