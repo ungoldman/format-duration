@@ -1,3 +1,7 @@
+<div align="center">
+
+<img src="./stopwatch.png" alt="stopwatch" width="200">
+
 # format-duration
 
 Convert a number in milliseconds to a standard duration string.
@@ -11,6 +15,8 @@ Convert a number in milliseconds to a standard duration string.
 [build-image]: https://github.com/ungoldman/format-duration/actions/workflows/tests.yml/badge.svg
 [build-url]: https://github.com/ungoldman/format-duration/actions/workflows/tests.yml
 [downloads-image]: https://img.shields.io/npm/dm/format-duration.svg
+
+</div>
 
 ## Install
 
@@ -75,3 +81,5 @@ Contributions welcome! Please read the [contributing guidelines](CONTRIBUTING.md
 ## License
 
 [ISC](LICENSE.md)
+
+Stopwatch image is from [emojidex](https://emojidex.com/emoji/stopwatch).
