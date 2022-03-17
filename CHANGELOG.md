@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.0 - 2022-03-16
+
+### Breaking Changes
+- Drop support for node 8 & 10 (now only supporting node LTS: 12, 14, 16).
+
+### Misc
+- No dependencies! Code from parse-ms and add-zero has been consolidated for easier maintenance and smaller module footprint.
+- Repo ownership transfer (hypermodules -> ungoldman). Same maintainers, new URL.
+
 ## 1.4.0 - 2021-08-04
 
 ### Features
