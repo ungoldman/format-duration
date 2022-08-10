@@ -57,7 +57,7 @@ test('it works with leading zeros and milliseconds', function (t) {
   t.end()
 })
 
-test('it works with negarive duration and milliseconds', function (t) {
+test('it works with negative durations and milliseconds', function (t) {
   t.equal(f(-999, { milliseconds: true }), '-0:00.999', 'anything under a second is correctly displayed with negative sign')
   t.equal(f(-1000, { milliseconds: true }), '-0:01.000', 'check -1000 milliseconds is a second')
   t.equal(f(-1000 * 2 + 1, { milliseconds: true }), '-0:01.999', 'displays -1999 as -00:01.999')
