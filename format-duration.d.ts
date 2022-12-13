@@ -2,8 +2,8 @@ export interface FormatDurationOptions {
   /**
    * Adds leading zero to the formatted string.
    */
-  leading?: boolean,
-  milliseconds?: boolean,
+  leading?: boolean
+  ms?: boolean
 }
 
 /**
@@ -13,6 +13,6 @@ export interface FormatDurationOptions {
  * @param {object} options - Formatting options
  * @returns {string} The formatted duration string.
  */
- declare function formatDuration (ms: number, options?: FormatDurationOptions): string
+declare function formatDuration (ms: number, options?: FormatDurationOptions): string
 
- export = formatDuration
+export = formatDuration
