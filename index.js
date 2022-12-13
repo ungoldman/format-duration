@@ -29,22 +29,34 @@ function addZero (value, digits) {
   return str
 }
 
+function getSign (duration, showMilliseconds) {
+  if (showMilliseconds) return duration < 0 ? '-' : ''
+  return duration <= -1000 ? '-' : ''
+}
+
 /**
  * Convert a number in milliseconds to a standard duration string.
  * @param {number} ms - duration in milliseconds
  * @param {object} options - formatDuration options object
  * @param {boolean} [options.leading=false] - add leading zero
+ * @param {boolean} [options.milliseconds=false] - add milliseconds
  * @returns string - formatted duration string
  */
 function formatDuration (ms, options) {
   const leading = options && options.leading
+  const showMilliseconds = options && options.milliseconds
   const unsignedMs = ms < 0 ? -ms : ms
-  const sign = ms <= -1000 ? '-' : ''
+  const sign = getSign(ms, showMilliseconds)
   const t = parseMs(unsignedMs)
   const seconds = addZero(t.seconds)
-  if (t.days) return sign + t.days + ':' + addZero(t.hours) + ':' + addZero(t.minutes) + ':' + seconds
-  if (t.hours) return sign + (leading ? addZero(t.hours) : t.hours) + ':' + addZero(t.minutes) + ':' + seconds
-  return sign + (leading ? addZero(t.minutes) : t.minutes) + ':' + seconds
+  let output = ''
+
+  if (t.days && !output) output = sign + t.days + ':' + addZero(t.hours) + ':' + addZero(t.minutes) + ':' + seconds
+  if (t.hours && !output) output = sign + (leading ? addZero(t.hours) : t.hours) + ':' + addZero(t.minutes) + ':' + seconds
+  if (!output) output = sign + (leading ? addZero(t.minutes) : t.minutes) + ':' + seconds
+
+  if (showMilliseconds) output += '.' + addZero(t.milliseconds, 3)
+  return output
 }
 
 module.exports = formatDuration

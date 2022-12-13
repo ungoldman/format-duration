@@ -2,7 +2,8 @@ export interface FormatDurationOptions {
   /**
    * Adds leading zero to the formatted string.
    */
-  leading: boolean
+  leading?: boolean,
+  milliseconds?: boolean,
 }
 
 /**
