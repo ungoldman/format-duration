@@ -23,13 +23,13 @@
     "time"
   ],
   "license": "ISC",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "format-duration.js",
+  "types": "formation-duration.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hypermodules/format-duration.git"
   },
   "scripts": {
-    "test": "standard && tape test/index.js"
+    "test": "standard && tape *.test.js"
   }
 }

@@ -1,16 +1,16 @@
 // adapted from https://github.com/sindresorhus/parse-ms.
 // moved to internal function because parse-ms is now pure ESM.
-function parseMs (milliseconds) {
-  if (typeof milliseconds !== 'number') {
+function parseMs (ms) {
+  if (typeof ms !== 'number') {
     throw new TypeError('Expected a number')
   }
 
   return {
-    days: Math.trunc(milliseconds / 86400000),
-    hours: Math.trunc(milliseconds / 3600000) % 24,
-    minutes: Math.trunc(milliseconds / 60000) % 60,
-    seconds: Math.trunc(milliseconds / 1000) % 60,
-    milliseconds: Math.trunc(milliseconds) % 1000
+    days: Math.trunc(ms / 86400000),
+    hours: Math.trunc(ms / 3600000) % 24,
+    minutes: Math.trunc(ms / 60000) % 60,
+    seconds: Math.trunc(ms / 1000) % 60,
+    ms: Math.trunc(ms) % 1000
   }
 }
 
@@ -29,8 +29,8 @@ function addZero (value, digits) {
   return str
 }
 
-function getSign (duration, showMilliseconds) {
-  if (showMilliseconds) return duration < 0 ? '-' : ''
+function getSign (duration, showMs) {
+  if (showMs) return duration < 0 ? '-' : ''
   return duration <= -1000 ? '-' : ''
 }
 
@@ -44,9 +44,9 @@ function getSign (duration, showMilliseconds) {
  */
 function formatDuration (ms, options) {
   const leading = options && options.leading
-  const showMilliseconds = options && options.milliseconds
+  const showMs = options && options.ms
   const unsignedMs = ms < 0 ? -ms : ms
-  const sign = getSign(ms, showMilliseconds)
+  const sign = getSign(ms, showMs)
   const t = parseMs(unsignedMs)
   const seconds = addZero(t.seconds)
   let output = ''
@@ -55,7 +55,7 @@ function formatDuration (ms, options) {
   if (t.hours && !output) output = sign + (leading ? addZero(t.hours) : t.hours) + ':' + addZero(t.minutes) + ':' + seconds
   if (!output) output = sign + (leading ? addZero(t.minutes) : t.minutes) + ':' + seconds
 
-  if (showMilliseconds) output += '.' + addZero(t.milliseconds, 3)
+  if (showMs) output += '.' + addZero(t.ms, 3)
   return output
 }
 
