@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.0.0 - 2022-12-12
+
+### Breaking
+- Drop support for Node 12
+
+### Features
+- New option: `ms` (show milliseconds) (#17)
+- TypeScript: Export FormatDurationOptions (#15)
+
+### Misc
+- CI: add Node 18 to test matrix
+
 ## 2.0.0 - 2022-03-16
 
 ### Breaking Changes
