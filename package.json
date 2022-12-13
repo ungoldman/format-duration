@@ -27,7 +27,7 @@
   "types": "formation-duration.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hypermodules/format-duration.git"
+    "url": "git+https://github.com/ungoldman/format-duration.git"
   },
   "scripts": {
     "test": "standard && tape *.test.js"
