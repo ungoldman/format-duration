@@ -3,10 +3,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.0.2 - 2023-01-17
+
+### Fixes
+- Move FormatDurationOptions under namespace formatDuration (#20) - thanks @sebinemeth
+
 ## 3.0.1 - 2022-12-18
 
 ### Fixes
--  Fix typo to load types properly (#18) - thanks @petrbela
+- Fix typo to load types properly (#18) - thanks @petrbela
 
 ### Misc
 - Fix repo URL in package.json
