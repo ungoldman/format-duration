@@ -24,12 +24,12 @@
   ],
   "license": "ISC",
   "main": "format-duration.js",
-  "types": "format-duration.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ungoldman/format-duration.git"
   },
   "scripts": {
     "test": "standard && tape *.test.js"
-  }
+  },
+  "types": "format-duration.d.ts"
 }
