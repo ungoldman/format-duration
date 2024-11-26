@@ -4,8 +4,12 @@ declare namespace formatDuration {
      * Adds leading zero to the formatted string.
      */
     leading?: boolean
+  } & ({
     ms?: boolean
-  }
+  } | {
+    ms: boolean
+    msDigits?: number
+  })
 }
 
 /**
