@@ -77,6 +77,11 @@ format(1000 * 60 * 60, { leading: true }) // '01:00:00'
 format(999, { ms: true }) // '0:00.999'
 format(1000 * 60, { ms: true }) // '1:00.000'
 format(1000 * 60 * 60 * 24 - 1, { ms: true }) // '23:59:59.999'
+
+// with `msDigits` option, formatting looks like this
+format(999, { ms: true, msDigits: 2 }) // '0:00.99'
+format(1000 * 60, { ms: true, msDigits: 1 }) // '1:00.0'
+format(1000 * 60 * 60 * 24 - 1, { ms: true, msDigits: 4 }) // '23:59:59.999'
 ```
 
 ## Contributing
