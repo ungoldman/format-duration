@@ -12,6 +12,7 @@ test('it works', function (t) {
   t.equal(f(1000 * 60 * 60 * 24), '1:00:00:00', 'check 24 hours is a day')
   t.equal(f(1000 * 60 * 60 * 24 - 1), '23:59:59', 'check 23 hours looks okay')
   t.equal(f(1000 * 60 * 60 * 24 * 365), '365:00:00:00', 'check 365 days is too long to care')
+  t.equal(f(1000 * 60 * 60 - 1, { ms: true, msDigits: 2 }), '59:59.00', 'check msDigits limits ms digits')
   t.end()
 })
 
