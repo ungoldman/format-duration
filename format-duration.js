@@ -55,7 +55,7 @@ function formatDuration (ms, options) {
   if (t.hours && !output) output = sign + (leading ? addZero(t.hours) : t.hours) + ':' + addZero(t.minutes) + ':' + seconds
   if (!output) output = sign + (leading ? addZero(t.minutes) : t.minutes) + ':' + seconds
 
-  if (showMs) output += '.' + addZero(t.ms, 3)
+  if (showMs) output += '.' + addZero(t.ms, 3).substring(0, options.msDigits !== undefined ? options.msDigits : 3)
   return output
 }
 
