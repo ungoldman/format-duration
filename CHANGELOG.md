@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.0.0](https://github.com/ungoldman/format-duration/compare/v3.0.2...v4.0.0) (2026-06-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* now ESM-only and requires Node.js >= 22.12. The CommonJS build is dropped. `import format from 'format-duration'` is unchanged. CommonJS consumers on Node 22.12+ can still require() it but must change `const format = require('format-duration')` to `const { formatDuration } = require('format-duration')` (or `.default`).
+
+### Code Refactoring
+
+* rewrite in TypeScript, ESM-only ([77d8bb0](https://github.com/ungoldman/format-duration/commit/77d8bb00106a8916e3849c5823f0c522cef5687e))
+
 ## 3.0.2 - 2023-01-17
 
 ### Fixes
