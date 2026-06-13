@@ -7,6 +7,11 @@ updates:
     groups:
       npm:
         patterns: ["*"]
+    # @types/node tracks the minimum supported Node (engines), not the latest
+    # release, so its major moves only when the engines floor is raised.
+    ignore:
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
