@@ -2,7 +2,6 @@
   "name": "format-duration",
   "description": "Convert a number in milliseconds to a standard duration string.",
   "version": "3.0.2",
-  "type": "module",
   "author": "Nate Goldman <ungoldman@gmail.com> (https://ungoldman.com/)",
   "bugs": {
     "url": "https://github.com/ungoldman/format-duration/issues"
@@ -45,16 +44,17 @@
     "url": "git+https://github.com/ungoldman/format-duration.git"
   },
   "scripts": {
-    "prebuild": "rm -rf dist",
     "build": "tsc",
+    "coverage": "node --test --experimental-test-coverage --test-coverage-exclude='test/**' --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-functions=100 test/*.test.ts",
     "format": "biome format --write .",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
+    "prebuild": "rm -rf dist",
     "prepublishOnly": "npm run build",
     "test": "npm run lint && npm run typecheck && npm run build && node --test test/*.test.ts",
-    "typecheck": "tsc -p tsconfig.test.json",
-    "coverage": "node --test --experimental-test-coverage --test-coverage-exclude='test/**' --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-functions=100 test/*.test.ts"
+    "typecheck": "tsc -p tsconfig.test.json"
   },
   "sideEffects": false,
+  "type": "module",
   "types": "./dist/index.d.ts"
 }
