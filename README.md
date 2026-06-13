@@ -24,10 +24,14 @@ Convert a number in milliseconds to a standard duration string.
 npm install format-duration
 ```
 
+As of v4 this is an ESM-only package. CommonJS code can `require()` it on Node 22.12+ (see [#201](https://github.com/ungoldman/gh-release/issues/201) for why).
+
 ## Usage
 
 ```js
-const format = require('format-duration')
+import format from 'format-duration'
+// or named: import { formatDuration } from 'format-duration'
+// from CommonJS: const { formatDuration } = require('format-duration')
 
 // anything under a second is rounded down to zero
 format(999) // '0:00'
@@ -68,10 +72,14 @@ format(-1000) // '-0:01'
 // 365 days looks like this (not bothering with years)
 format(-1000 * 60 * 60 * 24 * 365) // '-365:00:00:00'
 
-// with `leading` option, formatting looks like this
+// with `leading` option, the most-significant field is zero-padded too
 format(1000 * 60, { leading: true }) // '01:00'
 format(1000 * 60 - 1, { leading: true }) // '00:59'
 format(1000 * 60 * 60, { leading: true }) // '01:00:00'
+
+// the days field is left at natural width: unlike hours/minutes/seconds it is
+// unbounded (it never wraps into a larger unit), so it has no fixed width to pad to
+format(1000 * 60 * 60 * 24, { leading: true }) // '1:00:00:00'
 
 // with `ms` option, formatting looks like this
 format(999, { ms: true }) // '0:00.999'
