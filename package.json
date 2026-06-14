@@ -46,9 +46,8 @@
   "scripts": {
     "build": "tsc",
     "coverage": "node --test --experimental-test-coverage --test-coverage-exclude='test/**' --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-functions=100 test/*.test.ts",
-    "format": "biome format --write .",
+    "format": "biome check --write .",
     "lint": "biome check .",
-    "lint:fix": "biome check --write .",
     "prebuild": "rm -rf dist",
     "prepublishOnly": "npm run build",
     "test": "npm run lint && npm run typecheck && npm run build && node --test test/*.test.ts",
